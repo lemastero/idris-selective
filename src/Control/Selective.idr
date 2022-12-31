@@ -2,6 +2,7 @@ module Control.Selective
 
 %default total
 
+public export
 interface Applicative f => Selective f where
   select : f (Either a b) -> f (a -> b) -> f b
 
